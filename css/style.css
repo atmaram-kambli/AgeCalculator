@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* text-align: center; */
 }
-
 
 :root {
     --primary-color1: hsl(259, 100%, 65%);
@@ -14,12 +12,21 @@
 body {
     min-height: 100vh;
     min-width: 100vw;
-    background-color: var(--primary-color1);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
+.container::before {
+    background: url(../assets/images/bg2.avif) no-repeat center center/cover;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
 .container {
     width: 50%;
     border: 1px solid white;
@@ -32,7 +39,7 @@ body {
     display: flex;
     flex-direction: row;
     width: 80%;
-    color: var(--primary-color2);
+    margin-bottom: 5px;
 }
 .get {
     width: 100px;
@@ -40,14 +47,37 @@ body {
     padding: 5px;
     margin: 5px 10px;
 }
-#hr {
-    width: 90%;
-    border-color: var(--primary-color1);
+.arr {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
 }
+.arr > div {
+    border: 1px solid #000000;
+    background-color: rgba(0, 0, 0, 0.926);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#img1 {
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+}
+#hr {
+    width: 85%;
+    background-image: linear-gradient(left , white 2%, #E6E6E6 50%, rgb(58, 50, 123) 98%);
+}
+
 .disdat {
     padding: 15px;
     margin: 20px;
     width: 80%;
+    margin-top: 0px;
 }
 .dis {
     display: flex;
@@ -64,7 +94,7 @@ body {
     width: 100px;
     padding: 10px 10px;
     margin: 5px 0;
-    border: 1px solid var(--primary-color2);
+    border: 1px solid black;
     border-radius: 5px;
     font-weight: bold;
 }
