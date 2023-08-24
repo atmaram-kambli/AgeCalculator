@@ -47,6 +47,9 @@ body {
     padding: 5px;
     margin: 5px 10px;
 }
+#parad, #param, #paray {
+    color: var(--primary-color2);
+}
 .arr {
     display: flex;
     flex-direction: row; 
